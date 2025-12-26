@@ -1,0 +1,263 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+  --bg: #f4f1ec;
+  --paper: #fffdf8;
+  --border: #d6cfc4;
+  --text: #2f2a25;
+  --muted: #6b645c;
+  --accent: #8b5e34;
+  --accent-dark: #6f4a28;
+  --error: #b91c1c;
+}
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      to bottom,
+      #f7f4ef,
+      #ede7dd
+    );
+  color: var(--text);
+  font-family: "Georgia", "Times New Roman", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
+.app {
+  width: 100%;
+  max-width: 460px;
+  padding: 24px;
+}
+
+/* =========================
+   CARD (BOOK PAGE)
+========================= */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   TITLES
+========================= */
+h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: var(--accent-dark);
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: var(--accent);
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+button.secondary:hover {
+  background: rgba(139, 94, 52, 0.08);
+}
+
+/* =========================
+   TEXT & LINKS
+========================= */
+p {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+p button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* =========================
+   ERRORS
+========================= */
+.error {
+  color: var(--error);
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+.logout-btn {
+  margin-bottom: 16px;
+  background: #7c2d12;
+}
+
+.logout-btn:hover {
+  background: #5f1f0e;
+}
+
+/* =========================
+   BOOK LIST
+========================= */
+.book-list {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.book-item {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+}
+
+.book-item strong {
+  color: var(--accent-dark);
+}
+
+/* =========================
+   SMALL DETAILS
+========================= */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.page-title {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ===== BOOK LIST ===== */
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.book-card {
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.book-author {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.book-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
